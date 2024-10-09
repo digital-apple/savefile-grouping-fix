@@ -3,7 +3,7 @@
 class Serialization
 {
 public:
-	static auto GetSingleton() -> Serialization*;
+    static auto GetSingleton() -> Serialization*;
 
     bool GetSaveFileDirectory();
     auto GetID(const std::string_view& a_path) -> std::uint32_t;
