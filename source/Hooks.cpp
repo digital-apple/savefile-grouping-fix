@@ -124,8 +124,8 @@ namespace Addresses
 
         logger::info("Addresses :: Hooked CenterOnWorld");
 
-        REL::Relocation save_reader{ RELOCATION_ID(34872, 0), REL::Relocate(0xB4, 0x0) };
-        stl::write_thunk_call<SaveFileReaderA>(save_reader.address());
+		REL::Relocation save_reader{ RELOCATION_ID(34872, 442580), REL::Relocate(0xB4, 0x1B5) };
+		stl::write_thunk_call<SaveFileReaderA>(save_reader.address());
 
         logger::info("Addresses :: Hooked SavefileReaderA");
 
@@ -133,8 +133,8 @@ namespace Addresses
 
         logger::info("Addresses :: Hooked SavefileReaderB");
 
-        REL::Relocation save_game{ RELOCATION_ID(34818, 0), REL::Relocate(0x112, 0x0) };
-        stl::write_thunk_call<SaveGameHandler>(save_game.address());
+		REL::Relocation save_game{ RELOCATION_ID(34818, 35727), REL::Relocate(0x112, 0x1CE) };
+		stl::write_thunk_call<SaveGameHandler>(save_game.address());
 
         logger::info("Addresses :: Hooked SaveGameHandler");
     }
