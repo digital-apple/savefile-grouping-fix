@@ -25,7 +25,7 @@ target("savefile-grouping-fix")
     add_rules("commonlibsse-ng.plugin", {
         name = "savefile-grouping-fix",
         author = "digital-apple",
-        description = "fixes custom save files not being assigned to their correct group"
+        description = "fixes custom savefiles not being assigned to their correct group"
     })
 
     add_files("source/**.cpp")
