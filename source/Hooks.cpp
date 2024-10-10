@@ -66,6 +66,7 @@ namespace Addresses
             if (character_id == 0x0) { return; }
 
             a_entry->characterID = character_id;
+            a_entry->fileNameValid = true;
 
             logger::info("Addresses::SaveFileReaderA :: Restored character ID: '{:X}' for file: '{}'", character_id, a_path);
         }
@@ -83,6 +84,7 @@ namespace Addresses
             if (character_id == 0x0) { return; }
 
             a_entry->characterID = character_id;
+            a_entry->fileNameValid = true;
 
             logger::info("Addresses::SaveFileReaderB :: Restored character ID: '{:X}' for file: '{}'", character_id, a_path);
         }
