@@ -1,6 +1,6 @@
-# Ad Mortem - Permadeath
+# Savefile Grouping Fix
 
-* [Nexus Page](https://www.nexusmods.com/skyrimspecialedition/mods/130582)
+* [Nexus Page](https://www.nexusmods.com/skyrimspecialedition/mods/131212)
 
 ### Requirements
 
@@ -18,7 +18,7 @@ xmake build
 
 [alandtse](https://github.com/alandtse) and all the people who contributed to [CommonLibVR/NG](https://github.com/alandtse/CommonLibVR/tree/ng).
 
-Ashen, [Asrak](https://github.com/MaybeAsrak), Forn, Ghoulsmasher, Ghoulified, [Noah](https://github.com/NoahBoddie) and Orrie for general support.
+Ghoulsmasher for testing the plugin, Forn for marketing ideas (lol).
 
 ## License
 [GPL-3.0](LICENSE)
