@@ -37,7 +37,6 @@ void InitMessaging()
         switch (a_message->type) {
         case SKSE::MessagingInterface::kInputLoaded:
             Addresses::Hook();
-            if (!serializing_manager->GetSaveFileDirectory()) { stl::report_and_fail("Failed to obtain save file directory!"); }
             serializing_manager->Load();
             break;
         case SKSE::MessagingInterface::kDataLoaded:

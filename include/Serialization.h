@@ -22,7 +22,7 @@ private:
     Serialization& operator=(const Serialization&) = delete;
     Serialization& operator=(Serialization&&) = delete;
 
-    std::optional<std::filesystem::path> save_directory;
+    std::filesystem::path save_directory;
     std::string_view JSON_PATH = "Data\\SKSE\\Plugins\\savefile-grouping-fix.json"sv;
 
     /*

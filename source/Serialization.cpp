@@ -45,7 +45,7 @@ auto Serialization::GetID(const std::string_view& a_path) -> std::uint32_t
 
 bool Serialization::Find(const std::string_view& a_path)
 {
-    for (const auto& entry : std::filesystem::directory_iterator(*save_directory)) {
+    for (const auto& entry : std::filesystem::directory_iterator(save_directory)) {
         const auto filename = entry.path().filename();
 
         if (filename == a_path) {
@@ -78,6 +78,8 @@ void Serialization::Load()
 
 void Serialization::Clean()
 {
+    if (!std::filesystem::exists(save_directory)) { logger::error("Serialization::Clean :: Savefile directory couldn't be found! Canceling cleanup..."); return; }
+
     for (const auto& [file, id] : save_files) {
         if (!Find(file)) {
             logger::warn("Serialization::Clean :: Could not find ID & File pair: '{:X}' | '{}'! Erasing entry...", id, file);
