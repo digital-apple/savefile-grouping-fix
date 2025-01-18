@@ -1,0 +1,31 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+	<moduleName>Savefile Grouping Fix</moduleName>
+	
+	<installSteps order="Explicit">
+		<installStep name="Install plugin">
+			<plugin name="Thank you for installing!">
+				<typeDescriptor>
+					<dependencyType>
+						<defaultType name="Required"/>
+						<patterns>
+							<pattern>
+								<dependencies operator="And">
+									<fileDependency file="..." state="Active"/> 
+								</dependencies>
+							</pattern>
+						</patterns>
+					</dependencyType>
+				</typeDescription>
+				<conditionFlags>
+					<flag name="update">true</flag>
+				</conditionFlags>
+			</plugin>
+		</installStep>
+	</installSteps>
+	
+	<conditionalFileInstalls>
+		<patterns>
+			
+		</patterns>
+	</conditionalFileInstalls>
+</config>

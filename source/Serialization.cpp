@@ -78,6 +78,8 @@ void Serialization::Load()
 
 void Serialization::Clean()
 {
+    if (!GetSaveFileDirectory()) { return; }
+
     if (!std::filesystem::exists(save_directory)) { logger::error("Serialization::Clean :: Savefile directory couldn't be found! Canceling cleanup..."); return; }
 
     for (const auto& [file, id] : save_files) {
