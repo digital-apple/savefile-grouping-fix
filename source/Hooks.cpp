@@ -74,6 +74,8 @@ namespace
                 a_entry->saveNumber = header->saveNumber;
                 a_entry->characterName = header->playerName.c_str();
                 a_entry->locationName = header->location.c_str();
+            } else {
+                logger::warn("{} :: Could not read savefile header for: '{}', label left at defaults", a_hook, a_path);
             }
         }
 
