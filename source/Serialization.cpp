@@ -82,11 +82,13 @@ void Serialization::Clean()
 
     if (!std::filesystem::exists(save_directory)) { logger::error("Serialization::Clean :: Savefile directory couldn't be found! Canceling cleanup..."); return; }
 
-    for (const auto& [file, id] : save_files) {
-        if (!Find(file)) {
-            logger::warn("Serialization::Clean :: Could not find ID & File pair: '{:X}' | '{}'! Erasing entry...", id, file);
+    std::erase_if(save_files, [this](const auto& a_pair) {
+        const auto& [file, id] = a_pair;
 
-            save_files.erase(file);
-        }
-    }
+        if (Find(file)) { return false; }
+
+        logger::warn("Serialization::Clean :: Could not find ID & File pair: '{:X}' | '{}'! Erasing entry...", id, file);
+
+        return true;
+    });
 }
